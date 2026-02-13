@@ -1,263 +1,88 @@
-/* Old-world finance: severe, restrained, near-monochrome, print-like structure */
 
-:root{
-  --bg: #0c0d10;
-  --paper: #111217;
-  --paper2: #0f1014;
-  --text: #e8e8ea;
-  --muted: #b7b8bf;
-  --muted2: #8f9098;
-  --line: rgba(255,255,255,0.10);
-  --line2: rgba(255,255,255,0.06);
-  --accent: rgba(255,255,255,0.65); /* restrained, essentially monochrome */
-  --radius: 10px;
+body {
+  margin: 0;
+  background: #0e1013;
+  color: #e6e8ec;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
 }
 
-*{ box-sizing:border-box; }
-body{
-  margin:0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: ui-serif, "Iowan Old Style", "Garamond", "Times New Roman", serif;
-  letter-spacing: 0.01em;
-}
-
-.page{
-  max-width: 980px;
+.page {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 56px 26px 70px;
+  padding: 60px 24px;
 }
 
-.top{
-  display:flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 34px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--line2);
+.header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
 }
 
-.kicker{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--muted2);
-  margin-bottom: 10px;
-}
-
-h1{
-  margin:0;
-  font-size: 46px;
-  font-weight: 650;
-  letter-spacing: -0.02em;
-}
-
-.line{
-  height: 1px;
-  width: 160px;
-  background: var(--line);
-  margin: 14px 0 12px;
-}
-
-.subtitle{
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.4;
-}
-
-.links{
-  margin-top: 12px;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  color: var(--muted2);
-}
-
-.links a{
-  color: var(--text);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-}
-.links a:hover{ border-bottom-color: var(--line); }
-.sep{ margin: 0 10px; opacity: 0.6; }
-
-.portrait{
-  margin:0;
-}
-.portrait img{
-  width: 180px;
-  height: auto;
+.portrait {
+  width: 110px;
   border-radius: 6px;
-  border: 1px solid var(--line2);
-  filter: grayscale(55%) contrast(1.05) brightness(0.95);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-.section{
-  margin-top: 34px;
-}
-
-.section-head{
-  display:flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 12px;
-}
-
-h2{
+.header-text h1 {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted2);
+  font-size: 34px;
+  font-weight: 600;
 }
 
-.meta{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  color: var(--muted2);
+.descriptor {
+  margin: 8px 0 6px;
+  color: #b0b5bf;
+  font-size: 15px;
 }
 
-.paper{
-  background: linear-gradient(180deg, var(--paper), var(--paper2));
-  border: 1px solid var(--line2);
-  border-radius: var(--radius);
-  padding: 18px 18px 16px;
-}
-
-.paper-lite{
-  padding: 14px 18px;
-}
-
-.paper-head{
-  display:flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 14px;
-}
-
-h3{
-  margin:0;
-  font-size: 18px;
-  font-weight: 650;
-  letter-spacing: -0.01em;
-}
-
-.paper-sub{
-  margin-top: 6px;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.status{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  color: var(--muted);
-  border: 1px solid var(--line2);
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.02);
-  white-space: nowrap;
-}
-
-.rule{
-  height: 1px;
-  background: var(--line2);
-  margin: 14px 0 16px;
-}
-
-.row{
-  display:grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 18px;
-}
-@media (max-width: 860px){
-  .top{ align-items:flex-start; }
-  .row{ grid-template-columns: 1fr; }
-}
-
-.label{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--muted2);
-  margin-bottom: 10px;
-}
-
-ul{
+.links {
   margin: 0;
-  padding-left: 18px;
-  line-height: 1.75;
-  color: var(--text);
+  font-size: 14px;
 }
 
-.progressline{
-  display:flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.pct{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.track{
-  height: 8px;
-  border: 1px solid var(--line2);
-  border-radius: 999px;
-  background: rgba(255,255,255,0.03);
-  overflow:hidden;
-}
-
-.fill{
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, rgba(255,255,255,0.35), rgba(255,255,255,0.75));
-}
-
-.doclinks{
-  display:flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.doclinks a{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  color: var(--text);
+.links a {
+  color: #e6e8ec;
   text-decoration: none;
-  border-bottom: 1px solid var(--line2);
-  padding-bottom: 2px;
-  width: fit-content;
-}
-.doclinks a:hover{ border-bottom-color: var(--line); }
-
-.fineprint{
-  margin-top: 10px;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  color: var(--muted2);
-  line-height: 1.5;
 }
 
-.footer{
-  margin-top: 48px;
+.links a:hover {
+  text-decoration: underline;
 }
 
-.footer-rule{
-  height: 1px;
-  background: var(--line2);
-  margin-bottom: 12px;
+.section h2 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8c93a1;
+  margin-bottom: 18px;
 }
 
-.footnote{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 12.5px;
-  color: var(--muted2);
+.block {
+  background: #141820;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.block h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.sub {
+  margin: 6px 0 16px;
+  font-size: 14px;
+  color: #b0b5bf;
+}
+
+ul {
+  margin: 0 0 18px 18px;
+}
+
+.meta {
+  font-size: 13px;
+  color: #8c93a1;
 }
