@@ -4,11 +4,7 @@
   --text:#e8eaf0;
   --muted:#a9b0c3;
   --line:#22263a;
-  --chip:#1a1f33;
-  --chip2:#141a2b;
-  --ok:#2bd576;
-  --warn:#ffcc66;
-  --bad:#ff6b6b;
+  --accent:#6570ff;
 }
 
 *{box-sizing:border-box}
@@ -18,111 +14,56 @@ body{
   background: radial-gradient(1200px 800px at 20% -10%, #1a1f33 0%, transparent 60%), var(--bg);
   color:var(--text);
 }
-.wrap{max-width:1080px; margin:0 auto; padding:24px}
-h1{margin:0; font-size:34px; letter-spacing:-0.02em}
-.sub{margin:10px 0 0; color:var(--muted); max-width:70ch; line-height:1.4}
-.top{display:flex; gap:16px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap}
-.meta{display:flex; gap:10px; flex-wrap:wrap}
+.wrap{max-width:900px;margin:0 auto;padding:28px}
+.hero h1{margin:0;font-size:40px;letter-spacing:-0.03em}
+.sub{margin:10px 0 0;color:var(--muted);max-width:70ch;line-height:1.45}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+
 .pill{
   padding:10px 12px;
   border:1px solid var(--line);
-  background: linear-gradient(180deg, var(--chip2), rgba(0,0,0,0));
+  background: rgba(255,255,255,0.02);
   border-radius:999px;
   color:var(--muted);
   font-size:13px;
 }
-.pill.link{color:var(--text); text-decoration:none}
+.pill.link{color:var(--text);text-decoration:none}
 .pill.link:hover{border-color:#3a4270}
 
-.nav{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px}
-.chip{
-  border:1px solid var(--line);
-  background:var(--chip);
-  color:var(--text);
-  padding:9px 12px;
-  border-radius:999px;
-  font-size:13px;
-  cursor:pointer;
-}
-.chip:hover{border-color:#3a4270}
-.chip.active{border-color:#6570ff; box-shadow:0 0 0 2px rgba(101,112,255,0.18) inset}
-
-.bar{
-  display:flex; gap:10px; margin-top:16px; flex-wrap:wrap;
-}
-#search, #sort{
-  border:1px solid var(--line);
-  background:var(--card);
-  color:var(--text);
-  padding:12px 12px;
-  border-radius:12px;
-  font-size:14px;
-}
-#search{flex:1; min-width:260px}
-#sort{min-width:200px}
-
-.stats{
-  display:grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
-  gap:12px;
-  margin-top:18px;
-}
-.stat{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:16px;
-  padding:14px;
-}
-.stat .k{color:var(--muted); font-size:12px}
-.stat .v{font-size:22px; margin-top:6px}
-
-.grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap:14px;
-  margin-top:16px;
-}
-@media (max-width: 860px){
-  .stats{grid-template-columns: repeat(2, minmax(0,1fr))}
-  .grid{grid-template-columns: 1fr}
-}
-
 .card{
+  margin-top:18px;
   background:var(--card);
   border:1px solid var(--line);
   border-radius:18px;
   padding:16px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
 }
-.row{display:flex; justify-content:space-between; gap:10px; align-items:flex-start}
-.title{font-size:16px; margin:0; letter-spacing:-0.01em}
-.tag{font-size:12px; color:var(--muted)}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+h2{margin:0;font-size:18px}
+h3{margin:0 0 8px;font-size:16px}
+.tag{margin:6px 0 0;color:var(--muted);font-size:13px}
+
 .badge{
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
   border:1px solid var(--line);
-  background:#0f1220;
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:12px;
+  color:var(--muted);
 }
-.badge.ok{border-color: rgba(43,213,118,0.35); color: var(--ok)}
-.badge.warn{border-color: rgba(255,204,102,0.35); color: var(--warn)}
-.badge.bad{border-color: rgba(255,107,107,0.35); color: var(--bad)}
 
 .progress{
-  width:100%;
+  margin-top:14px;
   height:10px;
-  border-radius:999px;
-  background:#0f1220;
   border:1px solid var(--line);
+  border-radius:999px;
   overflow:hidden;
+  background:#0f1220;
 }
-.progress > div{height:100%; width:0% ; background:#6570ff}
+.bar{height:100%;width:0%;background:var(--accent)}
 
-.small{color:var(--muted); font-size:13px; line-height:1.45}
-.links{display:flex; gap:10px; flex-wrap:wrap}
-.links a{color:#cfd3ff; text-decoration:none; font-size:13px}
+.list{margin:12px 0 0;padding-left:18px;color:var(--text);line-height:1.5}
+.list b{color:var(--text)}
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.links a{color:#cfd3ff;text-decoration:none;font-size:13px}
 .links a:hover{text-decoration:underline}
 
-.foot{margin:28px 0 10px; color:var(--muted); font-size:13px}
+.foot{margin-top:24px;color:var(--muted);font-size:13px}
