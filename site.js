@@ -1,17 +1,38 @@
-const PROGRESS = 5;  // 0–100
-const MODEL_URL = "";
-const MEMO_URL = "";
+// Update only these fields.
+const PROGRESS = 8;                 // 0–100
+const MODEL_URL = "";              // add link when uploaded
+const MEMO_URL  = "";              // add link when uploaded
 
-document.getElementById("updated").textContent =
-  "Last updated: " + new Date().toISOString().slice(0, 10);
+const updatedEl = document.getElementById("updated");
+const barEl = document.getElementById("progressBar");
+const pctEl = document.getElementById("progressPct");
+const statusEl = document.getElementById("status");
 
-document.getElementById("progress-bar").style.width = PROGRESS + "%";
+updatedEl.textContent = "Last updated: " + new Date().toISOString().slice(0, 10);
 
-document.getElementById("status").textContent =
-  PROGRESS >= 100 ? "Completed" : "In progress";
+const pct = Math.max(0, Math.min(100, PROGRESS));
+barEl.style.width = pct + "%";
+pctEl.textContent = pct + "%";
 
-if (!MODEL_URL) document.getElementById("modelLink").style.display = "none";
-else document.getElementById("modelLink").href = MODEL_URL;
+statusEl.textContent = pct >= 100 ? "Shipped" : (pct > 0 ? "In progress" : "Planned");
 
-if (!MEMO_URL) document.getElementById("memoLink").style.display = "none";
-else document.getElementById("memoLink").href = MEMO_URL;
+const modelLink = document.getElementById("modelLink");
+const memoLink  = document.getElementById("memoLink");
+const hint = document.getElementById("artifactHint");
+
+let shown = 0;
+
+if (MODEL_URL) {
+  modelLink.href = MODEL_URL;
+  shown++;
+} else {
+  modelLink.style.display = "none";
+}
+if (MEMO_URL) {
+  memoLink.href = MEMO_URL;
+  shown++;
+} else {
+  memoLink.style.display = "none";
+}
+
+if (shown > 0) hint.style.display = "none";

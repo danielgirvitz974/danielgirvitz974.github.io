@@ -4,58 +4,95 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Daniel Girvitz — Operator Build Log</title>
+  <meta name="description" content="A conservative build log of shipped artifacts: models, memos, and playbooks." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="container">
-    <header class="header">
-      <h1>Operator Build Log</h1>
-      <p class="subtitle">
-        Development of financial and operational capabilities relevant to restructuring,
-        governance, and performance improvement.
+  <main class="page">
+    <header class="masthead">
+      <div class="kicker">Operator Build Log</div>
+      <h1>Financial & Structural Fluency</h1>
+      <p class="lede">
+        A disciplined record of capability-building for restructuring, governance, and performance improvement.
+        No portfolio theatre—only artifacts.
       </p>
+
       <div class="meta">
-        <span id="updated"></span>
+        <span class="meta-item" id="updated">Last updated: —</span>
+        <span class="meta-sep">•</span>
+        <a class="meta-link" href="https://github.com/danielgirvitz974" target="_blank" rel="noreferrer">GitHub</a>
+        <span class="meta-sep">•</span>
+        <a class="meta-link" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </header>
 
     <section class="section">
-      <h2>Current Build</h2>
-      <div class="card">
-        <div class="card-header">
-          <h3>Integrated Three‑Statement Financial Model (v1)</h3>
-          <span id="status" class="status"></span>
-        </div>
-
-        <div class="progress">
-          <div id="progress-bar"></div>
-        </div>
-
-        <ul class="details">
-          <li>Integrated Income Statement, Balance Sheet, and Cash Flow</li>
-          <li>Driver-based revenue and expense assumptions</li>
-          <li>Working capital schedule</li>
-          <li>Debt schedule and basic interest sensitivity</li>
-        </ul>
-
-        <div class="links">
-          <a id="modelLink" href="#" target="_blank">Model</a>
-          <a id="memoLink" href="#" target="_blank">Operator Memo</a>
-        </div>
+      <div class="section-head">
+        <h2>Current Build</h2>
+        <div class="hint">Phase I — Financial control</div>
       </div>
+
+      <article class="card">
+        <div class="card-top">
+          <div>
+            <h3 class="card-title">Integrated Three‑Statement Model (v1)</h3>
+            <div class="card-sub">IS / BS / CF • driver-based • checks • scenarios</div>
+          </div>
+          <span class="status" id="status">In progress</span>
+        </div>
+
+        <div class="progress" aria-label="Progress">
+          <div class="progress-track">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <div class="progress-meta">
+            <span id="progressPct">—%</span>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="grid-col">
+            <div class="label">Definition of done</div>
+            <ul class="list">
+              <li>Integrated IS/BS/CF with balance checks</li>
+              <li>Working capital schedule (AR/AP/inventory)</li>
+              <li>Debt schedule + interest sensitivity</li>
+              <li>Scenario toggles + liquidity stress case</li>
+            </ul>
+          </div>
+
+          <div class="grid-col">
+            <div class="label">Artifacts</div>
+            <div class="links">
+              <a class="btn" id="modelLink" href="#" target="_blank" rel="noreferrer">Model (Excel)</a>
+              <a class="btn" id="memoLink" href="#" target="_blank" rel="noreferrer">Operator Memo (1 page)</a>
+            </div>
+            <div class="fineprint" id="artifactHint">
+              Links appear once uploaded. Keep artifacts public or shareable.
+            </div>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section class="section">
-      <h2>Planned Builds</h2>
-      <ul class="planned">
-        <li>Cash runway and liquidity stress test</li>
-        <li>Debt covenant and leverage sensitivity analysis</li>
-        <li>Valuation framework (DCF and multiples)</li>
-      </ul>
+      <div class="section-head">
+        <h2>Planned Builds</h2>
+        <div class="hint">Queued—no time estimates.</div>
+      </div>
+
+      <div class="simple-card">
+        <ul class="list tight">
+          <li>Cash runway model + working capital stress test</li>
+          <li>Covenant / leverage sensitivity overview (basic)</li>
+          <li>Valuation sanity checks (multiples + DCF skeleton)</li>
+        </ul>
+      </div>
     </section>
 
     <footer class="footer">
-      <p>Minimal. Structured. Updated as work ships.</p>
+      <div class="footer-line"></div>
+      <p class="footer-text">Minimal. Traditional. Updated only when something ships.</p>
     </footer>
   </main>
 
