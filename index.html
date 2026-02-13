@@ -4,62 +4,90 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Daniel Girvitz</title>
-  <meta name="description" content="Financial modeling and structural analysis development." />
+  <meta name="description" content="A concise record of financial modeling and structural analysis work." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="page">
-
-    <header class="header">
-      <div class="header-left">
+    <header class="top">
+      <div class="nameblock">
+        <div class="kicker">Statement of Work</div>
         <h1>Daniel Girvitz</h1>
-        <div class="title">Financial Modeling & Capital Structure Analysis</div>
-
+        <div class="line"></div>
+        <div class="subtitle">Financial Modeling · Capital Structure · Operational Evaluation</div>
         <div class="links">
-          <a href="https://github.com/danielgirvitz974" target="_blank">GitHub</a>
-          <span class="sep">|</span>
-          <a href="https://www.linkedin.com/in/danielgirvitz974/" target="_blank">LinkedIn</a>
+          <a href="https://github.com/danielgirvitz974" target="_blank" rel="noreferrer">GitHub</a>
+          <span class="sep">·</span>
+          <a href="https://www.linkedin.com/in/danielgirvitz974/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </div>
 
-      <div class="header-right">
-        <img src="portrait.jpg" alt="Daniel Girvitz portrait">
-      </div>
+      <figure class="portrait">
+        <img src="portrait.jpg" alt="Portrait of Daniel Girvitz" />
+      </figure>
     </header>
 
     <section class="section">
-      <h2>Current Work</h2>
+      <div class="section-head">
+        <h2>Current Focus</h2>
+        <div class="meta">Last updated: <span id="updated">—</span></div>
+      </div>
 
-      <div class="card">
-        <div class="card-header">
+      <article class="paper">
+        <div class="paper-head">
           <div>
             <h3>Integrated Three-Statement Financial Model</h3>
-            <div class="subtitle">Income Statement · Balance Sheet · Cash Flow</div>
+            <div class="paper-sub">Income Statement · Balance Sheet · Cash Flow</div>
           </div>
-          <div class="status" id="status">In Progress</div>
+          <div class="status" id="status">In progress</div>
         </div>
 
-        <div class="progress-container">
-          <div class="progress-bar" id="progressBar"></div>
-        </div>
+        <div class="rule"></div>
 
-        <div class="progress-meta">
-          Completion: <span id="progressPct">—%</span>
+        <div class="row">
+          <div class="col">
+            <div class="label">Scope</div>
+            <ul>
+              <li>Integrated statements with balance validation</li>
+              <li>Working capital schedule</li>
+              <li>Debt schedule and interest sensitivity</li>
+              <li>Scenario and liquidity analysis</li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="label">Progress</div>
+            <div class="progressline">
+              <span class="pct" id="progressPct">—%</span>
+              <div class="track">
+                <div class="fill" id="progressBar"></div>
+              </div>
+            </div>
+            <div class="label" style="margin-top:18px;">Documentation</div>
+            <div class="doclinks">
+              <a id="modelLink" href="#" target="_blank" rel="noreferrer">Financial Model</a>
+              <a id="memoLink" href="#" target="_blank" rel="noreferrer">Analytical Summary</a>
+            </div>
+            <div class="fineprint" id="artifactHint">Links will be provided upon completion and upload.</div>
+          </div>
         </div>
+      </article>
+    </section>
 
-        <ul class="scope">
-          <li>Integrated financial statements with balance validation</li>
-          <li>Working capital schedule</li>
-          <li>Debt schedule and interest sensitivity</li>
-          <li>Scenario and liquidity analysis</li>
+    <section class="section">
+      <h2>Next Areas</h2>
+      <div class="paper paper-lite">
+        <ul>
+          <li>Cash runway and liquidity stress testing</li>
+          <li>Covenant and leverage sensitivity overview</li>
+          <li>Valuation framework (DCF and market multiples)</li>
         </ul>
       </div>
     </section>
 
     <footer class="footer">
-      Last updated: <span id="updated">—</span>
+      <div class="footer-rule"></div>
+      <div class="footnote">Deliberate and restrained. Updated only upon completion of milestones.</div>
     </footer>
-
   </main>
 
   <script src="site.js"></script>
