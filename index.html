@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daniel Girvitz — Turnaround Skill Stack</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap">
+    <div class="top">
+      <div>
+        <h1>Turnaround Skill Stack</h1>
+        <p class="sub">
+          A living map of capabilities I’m building for restructuring, governance, and high-stakes problem-solving.
+        </p>
+      </div>
+      <div class="meta">
+        <div class="pill" id="lastUpdated">Updated: —</div>
+        <a class="pill link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="pill link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="finance">Finance</button>
+      <button class="chip" data-filter="modeling">Modeling</button>
+      <button class="chip" data-filter="risk">Risk & Audit</button>
+      <button class="chip" data-filter="data">Data</button>
+      <button class="chip" data-filter="ops">Ops & Turnaround</button>
+      <button class="chip" data-filter="comms">Comms</button>
+    </nav>
+
+    <div class="bar">
+      <input id="search" type="search" placeholder="Search skills, courses, tools…" />
+      <select id="sort">
+        <option value="priority">Sort: Priority</option>
+        <option value="progress">Sort: Progress</option>
+        <option value="status">Sort: Status</option>
+        <option value="title">Sort: Title</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="stats" id="stats"></section>
+    <section class="grid" id="grid"></section>
+
+    <footer class="foot">
+      <p>
+        Built on GitHub Pages. Minimal, factual, and updated as I ship work.
+      </p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
