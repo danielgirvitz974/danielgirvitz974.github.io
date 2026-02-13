@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #111315;
+  color: #e5e5e5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin-top: 12px;
+  color: #b5b5b5;
+  line-height: 1.5;
+  max-width: 700px;
+}
+
+.meta {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #888;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #2a2d31;
+  padding-bottom: 8px;
+}
+
+.card {
+  background-color: #181b1f;
+  border: 1px solid #2a2d31;
+  padding: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.status {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.progress {
+  margin-top: 16px;
+  height: 6px;
+  background-color: #2a2d31;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4a5568;
+}
+
+.details {
+  margin-top: 16px;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.links {
+  margin-top: 16px;
+}
+
+.links a {
+  margin-right: 20px;
+  color: #d4d4d4;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  padding-bottom: 2px;
+}
+
+.links a:hover {
+  color: #ffffff;
+  border-bottom-color: #777;
+}
+
+.planned {
+  padding-left: 18px;
+  line-height: 1.8;
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: 13px;
+  color: #777;
+}
